@@ -15,9 +15,9 @@ public class ChessClock extends Clock implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-    private Instant instantStart = null;
-    private Instant instantLeft = null;
-    private Instant instantRight = null;
+    private Instant instantStart;
+    private Instant instantLeft;
+    private Instant instantRight;
 
     private long timeLeft;
     private long timeRight;
