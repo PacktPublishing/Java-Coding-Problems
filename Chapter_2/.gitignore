@@ -1,4 +1,5 @@
 build/
+target/
 dist/
 nbproject/
 build.xml
