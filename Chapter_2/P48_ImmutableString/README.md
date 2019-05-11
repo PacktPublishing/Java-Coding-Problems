@@ -1,2 +1,2 @@
 # Immutable String
-Explain why the String class is immutable.
+Explain why the **String** class is immutable.
