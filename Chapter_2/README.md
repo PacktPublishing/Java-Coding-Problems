@@ -1,0 +1,2 @@
+# Strings, numbers & math problems
+This chapter includes 18 problems that involves objects, immutability and switch expressions. The chapter starts with several problems about dealing with null references. It continues with problems regarding checking indexes, equals() and hashCode(), and immutability (e.g., writing immutable classes, passing/returning mutable objects from immutable classes). The last part of the chapter deals with cloning objects and JDK 12 switch expressions.
