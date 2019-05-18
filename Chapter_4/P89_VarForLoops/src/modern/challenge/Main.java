@@ -28,9 +28,6 @@ public class Main {
         System.out.println("\n\nLVTI:");
         for (var player : players) { // 'player' is inferred of type Player
             System.out.print(player + " ");
-        }
-        
-        System.out.println("\n");
+        }               
     }
-
 }
