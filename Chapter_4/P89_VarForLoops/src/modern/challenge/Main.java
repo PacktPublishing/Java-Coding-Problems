@@ -14,7 +14,7 @@ public class Main {
 
         // using var
         System.out.println("\n\nLVTI:");
-        for (var i = 0; i < 5; i++) { // i is inferred of type int
+        for (var i = 0; i < 5; i++) { // 'i' is inferred of type int
             System.out.print(i + " ");
         }
 
@@ -26,7 +26,7 @@ public class Main {
         }
 
         System.out.println("\n\nLVTI:");
-        for (var player : players) { // i is inferred of type Player
+        for (var player : players) { // 'player' is inferred of type Player
             System.out.print(player + " ");
         }
         
