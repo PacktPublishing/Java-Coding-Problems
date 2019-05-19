@@ -1,0 +1,2 @@
+# Arrays, collections and data structures
+This chapter includes 30 problems that involve arrays, collections, and several data structures. The aim is to provide solutions to a category of problems encountered in a wide range of applications such as, sorting, finding, comparing, ordering, reversing, filling, merging, copying, replacing and so on and forth. The provided solutions are implemented in Java 8-12 and they can be used as the base for solving other related problems as well.
