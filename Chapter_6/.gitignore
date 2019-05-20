@@ -1,7 +1,0 @@
-build/
-target/
-dist/
-nbproject/
-build.xml
-*.jar
-manifest.mf
