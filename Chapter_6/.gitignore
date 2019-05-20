@@ -2,6 +2,6 @@ build/
 target/
 dist/
 nbproject/
-*.xml
+build.xml
 *.jar
 manifest.mf
