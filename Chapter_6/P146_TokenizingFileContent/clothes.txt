@@ -1,0 +1,3 @@
+Top|white\10/XXL&Swimsuit|black\5/L
+Coat|red\11/M&Golden Jacket|yellow\12/XL
+Denim|Blue\22/M

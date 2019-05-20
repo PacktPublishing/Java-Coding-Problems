@@ -1,0 +1,10 @@
+{
+	"A": {
+		"type": "Gac",
+		"weight": 2000
+	},
+	"B": {
+		"type": "Hemi",
+		"weight": 1200
+	}
+}
