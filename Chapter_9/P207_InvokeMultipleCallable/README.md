@@ -1,0 +1,2 @@
+# Invoke multiple Callable tasks
+Write a program that simulates an assembly line for checking and packing up bulbs as follows: checking takes place during the day, while packing takes place at night. The checking process result in a queue of 100 bulbs every day. The packing process should pack and return all the bulbs at once. In other words, we should submit all **Callable** tasks and wait for all of them to complete.

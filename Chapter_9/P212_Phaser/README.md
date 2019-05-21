@@ -1,0 +1,2 @@
+# Phasers
+Write a program that relies on **Phaser** to simulate the start process of a server in 3 phases. The server is considered started after its 5 internal services has started. At first phase, we need to concurrently start 3 services. At second phase, we need to concurrently start two more 2 services (these can be started only if the first 3 are already running). At phase 3 the server perform a final check in and is considered started.

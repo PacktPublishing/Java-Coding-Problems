@@ -1,0 +1,2 @@
+# Semaphores
+Write a program that simulates via a **Semaphore** a day at the barbershop. Mainly, our barbershop can serve maximum three persons at a time (has only three seats). When a person arrives at the barbershop, he tries to take a seat. After it is served by a barber, the person releases the seat. If a person arrives at the barbershop when all three seats are taken, he must wait for a certain amount of time. If this time elapses and no seats have been freed, he will leave the barbershop.
