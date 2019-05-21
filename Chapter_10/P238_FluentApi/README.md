@@ -1,0 +1,2 @@
+# Entities Fluent API
+Let's assume that we have two entities, **Author** and **Book**, in a bidirectional lazy one-to-many relationship (an author has written multiple books). Shape these entities to expose a Fluent API (e.g., **new Author().setId(...).setName(...).setAge(...) ...**).

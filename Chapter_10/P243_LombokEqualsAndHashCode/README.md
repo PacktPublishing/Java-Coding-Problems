@@ -1,0 +1,2 @@
+# Lombok @EqualsAndHashCode in Entities
+Write a program that highlights the best way for overriding **equals()** and **hashCode()** in entities. Explain why Lombok **@EqualsAndHashCode** should be avoided in entities.

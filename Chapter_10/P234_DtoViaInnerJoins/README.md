@@ -1,0 +1,2 @@
+# JOINs
+Let's assume that we have two entities, **Author** and **Book**, in a bidirectional lazy one-to-many relationship (an author has written multiple books). Write a program that applies a **INNER JOIN** statement to this relationship and fetch the authors names and books titles in a Spring Projection.

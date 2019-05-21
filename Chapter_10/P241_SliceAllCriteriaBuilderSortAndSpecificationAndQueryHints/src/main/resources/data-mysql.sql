@@ -1,0 +1,10 @@
+INSERT INTO `author` (`id`, `age`, `name`, `surname`, `version`) VALUES (1,49,'Name_1','Surname_1',0);
+INSERT INTO `author` (`id`, `age`, `name`, `surname`, `version`) VALUES (2,20,'Name_7','Surname_7',0);
+INSERT INTO `author` (`id`, `age`, `name`, `surname`, `version`) VALUES (3,41,'Name_3','Surname_3',0);
+INSERT INTO `author` (`id`, `age`, `name`, `surname`, `version`) VALUES (4,32,'Name_5','Surname_5',0);
+INSERT INTO `author` (`id`, `age`, `name`, `surname`, `version`) VALUES (5,23,'Name_2','Surname_2',0);
+INSERT INTO `author` (`id`, `age`, `name`, `surname`, `version`) VALUES (6,63,'Name_8','Surname_8',0);
+INSERT INTO `author` (`id`, `age`, `name`, `surname`, `version`) VALUES (7,37,'Name_4','Surname_4',0);
+INSERT INTO `author` (`id`, `age`, `name`, `surname`, `version`) VALUES (8,31,'Name_9','Surname_9',0);
+INSERT INTO `author` (`id`, `age`, `name`, `surname`, `version`) VALUES (9,54,'Name_6','Surname_6',0);
+INSERT INTO `author` (`id`, `age`, `name`, `surname`, `version`) VALUES (10,50,'Name_10','Surname_10',0);

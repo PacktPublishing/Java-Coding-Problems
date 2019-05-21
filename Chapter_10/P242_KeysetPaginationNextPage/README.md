@@ -1,0 +1,2 @@
+# Keyset pagination
+Write a program that serves **Book**s in pages using keyset pagination (**Book** is an entity). The program should be able to say if there are more records, therefore to be able to display a button of type Next Page.

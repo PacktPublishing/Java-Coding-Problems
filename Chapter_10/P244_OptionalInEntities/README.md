@@ -1,0 +1,2 @@
+# Optional in entities
+Let's assume that we have two entities, **Author** and **Book**, in a bidirectional lazy one-to-many relationship (an author has written multiple books). Write a program that exemplifies the correct usage of **Optional** in these entities.
