@@ -39,7 +39,7 @@ public final class AssemblyLine {
         public void run() {
             while (runningProducer) {
                 try {
-                    String bulb = "bulb-" + new Random().nextInt(1000);
+                    String bulb = "bulb-" + rnd.nextInt(1000);
 
                     Thread.sleep(rnd.nextInt(MAX_PROD_TIME_MS));
 
