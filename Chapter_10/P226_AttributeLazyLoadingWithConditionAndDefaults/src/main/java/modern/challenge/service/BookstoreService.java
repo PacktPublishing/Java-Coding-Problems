@@ -1,7 +1,7 @@
-package com.bookstore.service;
+package modern.challenge.service;
 
-import com.bookstore.repository.AuthorRepository;
-import com.bookstore.entity.Author;
+import modern.challenge.repository.AuthorRepository;
+import modern.challenge.entity.Author;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;

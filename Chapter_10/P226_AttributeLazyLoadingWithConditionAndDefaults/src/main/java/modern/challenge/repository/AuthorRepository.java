@@ -1,6 +1,6 @@
-package com.bookstore.repository;
+package modern.challenge.repository;
 
-import com.bookstore.entity.Author;
+import modern.challenge.entity.Author;
 import java.util.List;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

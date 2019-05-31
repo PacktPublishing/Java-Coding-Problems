@@ -1,4 +1,4 @@
-package com.bookstore.entity;
+package modern.challenge.entity;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;

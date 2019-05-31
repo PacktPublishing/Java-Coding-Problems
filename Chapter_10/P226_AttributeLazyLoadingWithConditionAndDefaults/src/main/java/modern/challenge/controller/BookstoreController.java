@@ -1,7 +1,7 @@
-package com.bookstore.controller;
+package modern.challenge.controller;
 
-import com.bookstore.service.BookstoreService;
-import com.bookstore.entity.Author;
+import modern.challenge.service.BookstoreService;
+import modern.challenge.entity.Author;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ser.impl.SimpleBeanPropertyFilter;
 import com.fasterxml.jackson.databind.ser.impl.SimpleFilterProvider;
