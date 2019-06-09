@@ -51,6 +51,9 @@ public class BookstoreService {
     public List<Author> fetchAuthors() {
         List<Author> authors = authorRepository.findAll();
 
+        // pay attention to avoid N+1 issues
+        // avoid lazy fetching the avatars of all authors or in a condition
+        // that is evaluated to true for most of the authors
         for (Author author : authors) {
             if (author.getAge() < 40) {
                 author.getAvatar();
