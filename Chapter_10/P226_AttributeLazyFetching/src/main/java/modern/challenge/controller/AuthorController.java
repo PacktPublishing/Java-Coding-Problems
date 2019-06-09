@@ -26,9 +26,8 @@ public class AuthorController {
     @RequestMapping("/author")
     public Author fetchUser() {
 
-        Author author = authorService.fetchAuthorWithoutAvatar();
-        author.setAvatar(new byte[0]);
-
+        Author author = authorService.fetchAuthorWithoutAvatar();        
+        
         return author;
     }
 

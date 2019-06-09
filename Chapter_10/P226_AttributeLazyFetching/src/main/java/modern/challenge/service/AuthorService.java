@@ -38,7 +38,10 @@ public class AuthorService {
 
     public Author fetchAuthorWithoutAvatar() {
 
-        return authorRepository.findById(1L).orElseThrow();
+        Author author = authorRepository.findById(1L).orElseThrow();
+        author.setAvatar(new byte[0]);
+
+        return author;
     }
 
     @Transactional(readOnly = true)
