@@ -44,11 +44,11 @@ public class FibonacciRecursiveAction extends RecursiveAction {
 
         List<FibonacciRecursiveAction> subtasks = new ArrayList<>();
 
-        FibonacciRecursiveAction fibonaciiMinusOne = new FibonacciRecursiveAction(n - 1);
-        FibonacciRecursiveAction fibonaciiMinusTwo = new FibonacciRecursiveAction(n - 2);
+        FibonacciRecursiveAction fibonacciMinusOne = new FibonacciRecursiveAction(n - 1);
+        FibonacciRecursiveAction fibonacciMinusTwo = new FibonacciRecursiveAction(n - 2);
 
-        subtasks.add(fibonaciiMinusOne);
-        subtasks.add(fibonaciiMinusTwo);
+        subtasks.add(fibonacciMinusOne);
+        subtasks.add(fibonacciMinusTwo);
 
         return subtasks;
     }
