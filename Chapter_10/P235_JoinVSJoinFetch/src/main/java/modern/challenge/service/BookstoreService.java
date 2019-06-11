@@ -26,7 +26,7 @@ public class BookstoreService {
         List<Author> authors = authorRepository.fetchAuthorsBooksByPriceInnerJoin(40);
 
         authors.forEach((e) -> System.out.println(e.getName() + " " + e.getSurname()
-                + " | " + e.getBooks())); // causes extra SELECTs and the result the expected one
+                + " | " + e.getBooks())); // causes extra SELECTs and the result is not ok
     }
 
     // INNER JOIN
@@ -35,7 +35,7 @@ public class BookstoreService {
         List<Book> books = bookRepository.fetchBooksAuthorsInnerJoin();
 
         books.forEach((e) -> System.out.println(e.getTitle() + ", " + e.getIsbn()
-                + " | " + e.getAuthor())); // causes extra SELECTs and the result the expected one
+                + " | " + e.getAuthor())); // causes extra SELECTs but the result is ok
     }
 
     // JOIN FETCH
@@ -52,6 +52,6 @@ public class BookstoreService {
         List<Book> books = bookRepository.fetchBooksAuthorsJoinFetch();
 
         books.forEach((e) -> System.out.println(e.getTitle() + ", " + e.getIsbn()
-                + " | " + e.getAuthor())); // causes extra SELECTs and the result the expected one
+                + " | " + e.getAuthor())); // does not cause extra SELECTs and the result is ok
     }
 }
