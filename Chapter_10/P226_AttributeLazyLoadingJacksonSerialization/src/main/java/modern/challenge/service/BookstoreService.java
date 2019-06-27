@@ -54,24 +54,22 @@ public class BookstoreService {
     }
 
     @Transactional(readOnly = true)
+    public byte[] fetchAuthorAvatarViaId(long id) {
+
+        Author author = authorRepository.getOne(id);
+        return author.getAvatar();
+    }
+
+    @Transactional(readOnly = true)
     public List<Author> fetchAuthorsDetailsByAgeGreaterThanEqual(int age) {
 
         List<Author> authors = authorRepository.findByAgeGreaterThanEqual(age);
 
-        // this is just a proof of concept
         // don't do this since this is a N+1 case
         authors.forEach(a -> {
             a.getAvatar();
-            a.getAge();
         });
 
         return authors;
-    }
-
-    @Transactional(readOnly = true)
-    public int fetchAuthorAgeViaId(long id) {
-
-        Author author = authorRepository.getOne(id);                
-        return author.getAge();
     }
 }
