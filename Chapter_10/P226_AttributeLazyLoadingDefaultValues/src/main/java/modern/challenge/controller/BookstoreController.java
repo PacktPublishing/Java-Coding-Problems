@@ -2,12 +2,7 @@ package modern.challenge.controller;
 
 import modern.challenge.service.BookstoreService;
 import modern.challenge.entity.Author;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ser.impl.SimpleBeanPropertyFilter;
-import com.fasterxml.jackson.databind.ser.impl.SimpleFilterProvider;
 import java.io.IOException;
-import java.util.List;
-import org.springframework.http.converter.json.MappingJacksonValue;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -29,9 +24,8 @@ public class BookstoreController {
         return "created";
     }
 
-    @GetMapping("/authors")
-    public List<Author> fetchAuthors() {
-        return bookstoreService.fetchAuthors();
+    @GetMapping("/author/{id}")
+    public Author fetchAuthor(@PathVariable long id) {
+        return bookstoreService.fetchAuthor(id);
     }
-
 }
