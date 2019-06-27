@@ -24,7 +24,7 @@ public class BookstoreService {
         for (int i = 0; i < 40; i++) {
 
             Author author = new Author();
-            author.setId((long) i);
+            author.setId((long) i + 1);
             author.setName("Name_" + i);
             author.setSurname("Surname_" + i);
             author.setAge(18 + i);
