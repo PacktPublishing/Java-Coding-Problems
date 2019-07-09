@@ -1,9 +1,8 @@
 package modern.challenge.controller;
 
 import modern.challenge.service.BookstoreService;
-import java.util.List;
-import java.util.Map;
-import modern.challenge.entity.Book;
+import modern.challenge.view.BookView;
+import modern.challenge.view.BookViewDto;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -18,9 +17,15 @@ public class BookController {
     }
 
     @GetMapping("/books/{price}/{limit}")
-    public Map<List<Book>, Boolean> booksPage(@PathVariable long price, @PathVariable int limit) {
+    public BookView booksPage(@PathVariable long price, @PathVariable int limit) {
 
         return bookstoreService.fetchPage(price, limit);
+    }
+
+    @GetMapping("/dto/books/{price}/{limit}")
+    public BookViewDto booksPageDto(@PathVariable long price, @PathVariable int limit) {
+
+        return bookstoreService.fetchPageDto(price, limit);
     }
 
 }
