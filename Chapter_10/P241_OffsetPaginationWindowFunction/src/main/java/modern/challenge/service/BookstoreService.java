@@ -4,7 +4,11 @@ import java.util.List;
 import modern.challenge.dto.BookDto;
 import org.springframework.stereotype.Service;
 import modern.challenge.repository.BookRepository;
-import org.springframework.transaction.annotation.Transactional;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 
 @Service
 public class BookstoreService {
@@ -15,9 +19,13 @@ public class BookstoreService {
         this.bookRepository = bookRepository;
     }
 
-    @Transactional(readOnly = true)
-    public List<BookDto> fetchPage(int page, int size) {
+    public Page<BookDto> fetchPage(int page, int size) {
+        Pageable pageable = PageRequest.of(page, size, new Sort(Sort.Direction.ASC, "price"));
 
-        return bookRepository.fetchPage(page, size);
+        List<BookDto> authors = bookRepository.fetchPage(pageable);
+        Page<BookDto> pageOfAuthors = new PageImpl(authors, pageable,
+                authors.isEmpty() ? 0 : authors.get(0).getTotal());
+
+        return pageOfAuthors;
     }
 }

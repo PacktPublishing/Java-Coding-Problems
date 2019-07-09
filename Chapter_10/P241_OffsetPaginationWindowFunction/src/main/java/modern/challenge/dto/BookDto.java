@@ -1,5 +1,7 @@
 package modern.challenge.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 public interface BookDto {
 
     Long getId();
@@ -7,5 +9,6 @@ public interface BookDto {
     String getIsbn();
     int getPrice();
 
+    @JsonIgnore
     long getTotal();
 }
