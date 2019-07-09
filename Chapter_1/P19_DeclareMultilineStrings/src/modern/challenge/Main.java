@@ -39,12 +39,12 @@ public class Main {
         System.out.println("Text 4:" + LS + text4);
         System.out.println("--------------------------------------------");
 
-        // JDK 12 proposal, but dropped
+        // JDK 13 text blocks
         /*
-        String text5 = `My high school, 
+        String text5 = """My high school, 
                         the Illinois Mathematics and Science Academy,
                         showed me that anything is possible
-                        and that you're never too young to think big.`;
+                        and that you're never too young to think big.""";
         System.out.println("Text 5:" + LS + text5);
         System.out.println("--------------------------------------------");
         */
