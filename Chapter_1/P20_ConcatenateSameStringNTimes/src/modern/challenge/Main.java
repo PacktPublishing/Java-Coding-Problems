@@ -20,6 +20,7 @@ public class Main {
 
         displayExecutionTime(System.nanoTime() - startTimeV1);
         System.out.println("Result: \n" + resultV1);
+        System.out.println("Contains only substrings: " + Strings.hasOnlySubstrings(resultV1));
 
         System.out.println();
         System.out.println("String.repeat() solution:");
@@ -29,6 +30,7 @@ public class Main {
 
         displayExecutionTime(System.nanoTime() - startTimeV2);
         System.out.println("Result: \n" + resultV2);
+        System.out.println("Contains only substrings: " + Strings.hasOnlySubstrings(resultV2));
 
         System.out.println();
         System.out.println("String.join() solution:");
@@ -38,6 +40,7 @@ public class Main {
 
         displayExecutionTime(System.nanoTime() - startTimeV3);
         System.out.println("Result: \n" + resultV3);
+        System.out.println("Contains only substrings: " + Strings.hasOnlySubstrings(resultV3));
 
         System.out.println();
         System.out.println("Stream.generate() solution:");
@@ -49,6 +52,7 @@ public class Main {
 
         displayExecutionTime(System.nanoTime() - startTimeV4);
         System.out.println("Result: \n" + resultV4);
+        System.out.println("Contains only substrings: " + Strings.hasOnlySubstrings(resultV4));
 
         System.out.println();
         System.out.println("String.format() solution:");
@@ -58,6 +62,7 @@ public class Main {
 
         displayExecutionTime(System.nanoTime() - startTimeV5);
         System.out.println("Result: \n" + resultV5);
+        System.out.println("Contains only substrings: " + Strings.hasOnlySubstrings(resultV5));
 
         System.out.println();
         System.out.println("char[] solution:");
@@ -67,6 +72,7 @@ public class Main {
 
         displayExecutionTime(System.nanoTime() - startTimeV6);
         System.out.println("Result: \n" + resultV6);
+        System.out.println("Contains only substrings: " + Strings.hasOnlySubstrings(resultV6));
     }
 
     private static void displayExecutionTime(long time) {
