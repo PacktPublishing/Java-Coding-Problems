@@ -6,7 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
-public class IdProgBook implements Serializable {
+public class IdManBook implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -51,7 +51,7 @@ public class IdProgBook implements Serializable {
             return false;
         }
 
-        IdProgBook other = (IdProgBook) obj;
+        IdManBook other = (IdManBook) obj;
         return Objects.equals(id, other.getId());
     }
 

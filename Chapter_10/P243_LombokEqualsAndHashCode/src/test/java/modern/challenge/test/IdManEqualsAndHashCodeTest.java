@@ -2,7 +2,7 @@ package modern.challenge.test;
 
 import java.util.HashSet;
 import java.util.Set;
-import modern.challenge.IdProgBook;
+import modern.challenge.IdManBook;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertTrue;
@@ -24,19 +24,19 @@ import org.springframework.test.context.junit4.SpringRunner;
 @Rollback(false)
 @AutoConfigureTestDatabase(replace = Replace.NONE)
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
-public class IdProgEqualsAndHashCodeTest {
+public class IdManEqualsAndHashCodeTest {
 
     @Autowired
     private TestEntityManager entityManager;
 
-    private static final IdProgBook book = new IdProgBook();
-    private static final Set<IdProgBook> books = new HashSet<>();
+    private static final IdManBook book = new IdManBook();
+    private static final Set<IdManBook> books = new HashSet<>();
 
     @BeforeClass
     public static void setUp() {
         book.setId(1L);
-        book.setTitle("Java Modern Challenge");
-        book.setIsbn("45522-2322GH-23344");
+        book.setTitle("Modern History");
+        book.setIsbn("001-100-000-111");
 
         books.add(book);
     }
@@ -44,7 +44,7 @@ public class IdProgEqualsAndHashCodeTest {
     @Test
     // Find the Book that has never been persisted
     // Transition state at assert point: NEW
-    public void A_givenBookInSetWhenContainsThenTrue() {
+    public void A_givenBookInSetWhenContainsThenTrue() throws Exception {
 
         assertTrue(books.contains(book));
     }
@@ -53,7 +53,7 @@ public class IdProgEqualsAndHashCodeTest {
     // Find the Book after persist
     // Transition state at first assert point: NEW
     // Transition state at second and third assert point: MANAGED
-    public void B_givenBookWhenPersistThenSuccess() {
+    public void B_givenBookWhenPersistThenSuccess() throws Exception {
 
         assertNotNull(book.getId());
 
@@ -64,29 +64,23 @@ public class IdProgEqualsAndHashCodeTest {
     }
 
     @Test
-    // Find the Book after a merge() - UPDATE statement
-    // Transition state at first assert point: DETACHED
-    // Transition state at second assert point: MANAGED
-    public void C_givenBookWhenMergeThenSuccess() {
+    // Find the Book after a merge() - UPDATE statement   
+    // Transition state at assert point: MANAGED
+    public void C_givenBookWhenMergeThenSuccess() throws Exception {
 
-        book.setTitle("Mastering JSF 2.2");
-        assertTrue(books.contains(book));
-
-        IdProgBook mergedBook = entityManager.merge(book);
+        book.setTitle("New Modern History");
+        IdManBook mergedBook = entityManager.merge(book);
         entityManager.flush();
 
         assertTrue(books.contains(mergedBook));
     }
 
     @Test
-    // Find the Book after a find() - SELECT statement
-    // Transition state at first assert point: DETACHED
+    // Find the Book after a find() - SELECT statement    
     // Transition state at second assert point: MANAGED
-    public void D_givenBookWhenFindThenSuccess() {
+    public void D_givenBookWhenFindThenSuccess() throws Exception {
 
-        assertTrue(books.contains(book));
-
-        IdProgBook foundBook = entityManager.find(IdProgBook.class, book.getId());
+        IdManBook foundBook = entityManager.find(IdManBook.class, book.getId());
         entityManager.flush();
 
         assertTrue(books.contains(foundBook));
@@ -95,9 +89,9 @@ public class IdProgEqualsAndHashCodeTest {
     @Test
     // Find the Book after an explicit detach
     // Transition state at assert point: DETACHED    
-    public void E_givenBookWhenFindAndDetachThenSuccess() {
+    public void E_givenBookWhenFindAndDetachThenSuccess() throws Exception {
 
-        IdProgBook foundBook = entityManager.find(IdProgBook.class, book.getId());
+        IdManBook foundBook = entityManager.find(IdManBook.class, book.getId());
         entityManager.detach(foundBook);
 
         assertTrue(books.contains(foundBook));
@@ -106,9 +100,9 @@ public class IdProgEqualsAndHashCodeTest {
     @Test
     // Find the Book after a remove() - DELETE statement
     // Transition state at assert points: REMOVED    
-    public void F_givenBookWhenFindAndRemoveThenSuccess() {
+    public void F_givenBookWhenFindAndRemoveThenSuccess() throws Exception {
 
-        IdProgBook foundBook = entityManager.find(IdProgBook.class, book.getId());
+        IdManBook foundBook = entityManager.find(IdManBook.class, book.getId());
         entityManager.remove(foundBook);
         entityManager.flush();
 
