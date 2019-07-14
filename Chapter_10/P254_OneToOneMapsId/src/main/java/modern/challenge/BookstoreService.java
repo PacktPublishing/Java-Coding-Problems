@@ -18,34 +18,27 @@ public class BookstoreService {
         this.authorRepository = authorRepository;
     }
 
-    public void newBook() {
+    @Transactional
+    public void neBookOfAuthor() {
+
+        Author author = authorRepository.findById(1L).orElseThrow();
 
         Book book = new Book();
-        book.setIsbn("Isbn");
         book.setTitle("Title");
+        book.setIsbn("Isbn");
+
+        // this will set the id of the book as the id of the author
+        book.setAuthor(author);
 
         bookRepository.save(book);
     }
 
-    @Transactional
-    public void newAuthorOfBook() {
-
-        Book book = bookRepository.findByTitle("Title");
-
-        Author author = new Author();
-        author.setName("Name");
-        author.setSurname("Surname");
-        author.setAge(40);
-        author.setBook(book); // this will set the ID of author as the ID of the book
-
-        authorRepository.save(author);
-    }
-
     @Transactional(readOnly = true)
-    public Author findAuthorOfBook() {
+    public Book fetchBookByAuthorId() {
 
-        Book book = bookRepository.findByTitle("Title");
+        Author author = authorRepository.findById(1L).orElseThrow();
 
-        return authorRepository.findById(book.getId()).orElseThrow();
+        return bookRepository.findById(author.getId()).orElseThrow();
     }
+
 }

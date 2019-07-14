@@ -1,6 +1,6 @@
 package modern.challenge;
 
-import modern.challenge.entity.Author;
+import modern.challenge.entity.Book;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -22,13 +22,10 @@ public class MainApplication {
     @Bean
     public ApplicationRunner init() {
         return args -> {
+            bookstoreService.neBookOfAuthor();
 
-            bookstoreService.newBook();
-            bookstoreService.newAuthorOfBook();
-
-            Author author = bookstoreService.findAuthorOfBook();
-            System.out.println("Author details: " + author.getId()
-                    + ", " + author.getName() + " " + author.getSurname() + ", " + author.getAge());
+            Book book = bookstoreService.fetchBookByAuthorId();
+            System.out.println(book);
         };
     }
 }

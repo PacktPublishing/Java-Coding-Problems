@@ -2,12 +2,9 @@ package modern.challenge.entity;
 
 import java.io.Serializable;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.MapsId;
-import javax.persistence.OneToOne;
 
 @Entity
 public class Author implements Serializable {
@@ -21,10 +18,6 @@ public class Author implements Serializable {
     private String name;
     private String surname;
     private int age;
-
-    @OneToOne(fetch = FetchType.LAZY)
-    @MapsId
-    private Book book;
 
     public Long getId() {
         return id;
@@ -58,11 +51,8 @@ public class Author implements Serializable {
         this.age = age;
     }
 
-    public Book getBook() {
-        return book;
-    }
-
-    public void setBook(Book book) {
-        this.book = book;
-    }
+    @Override
+    public String toString() {
+        return "Author{" + "id=" + id + ", name=" + name + ", surname=" + surname + ", age=" + age + '}';
+    }        
 }
