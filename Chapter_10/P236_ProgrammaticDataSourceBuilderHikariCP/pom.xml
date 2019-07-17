@@ -4,11 +4,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.jpa</groupId>
-    <artifactId>P236_ProgrammaticHybridDataSourceBuilderHikariCP</artifactId>
+    <artifactId>P236_ProgrammaticDataSourceBuilderHikariCP</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
 
-    <name>P236_ProgrammaticHybridDataSourceBuilderHikariCP</name>
+    <name>P236_ProgrammaticDataSourceBuilderHikariCP</name>
     <description>JPA project for Spring Boot</description>
 
     <parent>
