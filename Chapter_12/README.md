@@ -1,6 +1,6 @@
-# Optional
-This chapter includes 24 problems meant to draw several rules for working with **Optional**. The problems and solutions presented in this section 
-are based on the Brian Goetz (Java’s language architect) definition: *Optional is intended to provide a limited mechanism for library method 
-return types where there needed to be a clear way to represent “no result," and using null for such was overwhelmingly likely to cause errors.*
- But, where there are rules there are exceptions as well. Therefore, do not conclude that the rules (or practices) presented here should be 
-followed (or avoided) at all costs. Like always, it’s an it depends problem that requires to evaluate the situation and weight pros and cons.
+# Persistance
+This chapter includes 32 problems that involve Java persistence. These problems have been carefully chosen for helping you to sharpen 
+the skills needed for using Java persistence in an efficient way. Java persistence layer is prone to a significant number of performance 
+penalties, and this chapter will reveal these problems one by one. From fetching attributes in a lazy manner to open session in view 
+anti-pattern, from counting and asserting SQLs to best techniques for mapping associations, we will give a lot of attention to the 
+performance of the persistent layer. The applications are developed using Spring Boot 2, Hibernate 5 and MySQL 8.

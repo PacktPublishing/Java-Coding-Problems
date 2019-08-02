@@ -1,6 +1,6 @@
-# Persistance
-This chapter includes 32 problems that involve Java persistence. These problems have been carefully chosen for helping you to sharpen 
-the skills needed for using Java persistence in an efficient way. Java persistence layer is prone to a significant number of performance 
-penalties, and this chapter will reveal these problems one by one. From fetching attributes in a lazy manner to open session in view 
-anti-pattern, from counting and asserting SQLs to best techniques for mapping associations, we will give a lot of attention to the 
-performance of the persistent layer. The applications are developed using Spring Boot 2, Hibernate 5 and MySQL 8.
+# Concurrency
+This chapter includes 27 problems that involve Java concurrency. It starts with fundamental problems about threads lifecycle and object/class
+ level locking. It continues with a bunch of problems about thread pools in Java including JDK 8 work-stealing thread pool. Afterwards, we
+ have problems dedicated to **Callable**, **Future** and **CompletableFuture**. Next, we dedicate several problems to Java synchronizers (e.g., barrier,
+ semaphore, exchanger, etc). Finally, we have problems for fork/join framework, **ReentrantLock**, **ReentrantReadWriteLock**, **StampedLock**, atomic
+ variables, tasks cancellation, interruptible methods, and deadlocks.

@@ -1,6 +1,7 @@
-# Concurrency
-This chapter includes 27 problems that involve Java concurrency. It starts with fundamental problems about threads lifecycle and object/class
- level locking. It continues with a bunch of problems about thread pools in Java including JDK 8 work-stealing thread pool. Afterwards, we
- have problems dedicated to **Callable**, **Future** and **CompletableFuture**. Next, we dedicate several problems to Java synchronizers (e.g., barrier,
- semaphore, exchanger, etc). Finally, we have problems for fork/join framework, **ReentrantLock**, **ReentrantReadWriteLock**, **StampedLock**, atomic
- variables, tasks cancellation, interruptible methods, and deadlocks.
+# Functional style programming
+This chapter includes 33 problems that involve Java functional style programming. The chapter starts with a problem meant to provide a 
+complete journey from 0 to functional interfaces. It continues with a suite of design patterns from GoF interpreted in Java functional 
+style. Next, we focus on several problems that involves classical operations encountered in streams (e.g., filter, map, etc), we discuss 
+infinite streams, null-safe streams and default methods. A comprehensive list of problems covers grouping, partitioning, and collectors, 
+including JDK 12 **teeing()** collector and writing a custom collector. In addition, **takeWhile()**, **dropWhile()**, composing functions, predicates 
+and comparators, testing and debugging lambdas, and other cool topics are discussed as well.
