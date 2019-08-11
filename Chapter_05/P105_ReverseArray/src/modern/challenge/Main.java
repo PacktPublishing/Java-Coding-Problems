@@ -28,9 +28,9 @@ public class Main {
         Collections.reverse(Arrays.asList(cloneMelons2));
         System.out.println("Reversed: " + Arrays.toString(cloneMelons2));
 
-        Object[] reversedMelon = IntStream.rangeClosed(1, melons.length)
-                .mapToObj(i -> melons[melons.length - i])
-                .toArray();
+        Melon[] reversedMelon = IntStream.rangeClosed(1, melons.length)
+                .mapToObj(i -> melons[melons.length - i])                
+                .toArray(Melon[]::new);
 
         System.out.println("Reversed: " + Arrays.toString(reversedMelon));
     }

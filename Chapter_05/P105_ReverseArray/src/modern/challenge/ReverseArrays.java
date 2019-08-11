@@ -34,7 +34,5 @@ public final class ReverseArrays {
             arr[leftHead] = arr[rightHead];
             arr[rightHead] = elem;
         }
-    }
-
-    
+    }    
 }
