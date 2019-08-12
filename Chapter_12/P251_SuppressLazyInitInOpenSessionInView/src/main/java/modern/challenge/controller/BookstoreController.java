@@ -1,7 +1,6 @@
 package modern.challenge.controller;
-
+ 
 import modern.challenge.service.BookstoreService;
-import java.util.Collections;
 import modern.challenge.entity.Author;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,24 +14,18 @@ public class BookstoreController {
         this.bookstoreService = bookstoreService;
     }
 
-    // Open Session In View will "force" lazy initialization of books
-    @RequestMapping("/fetchlazy")
-    public Author authorWithBooksLazyInitialized() {
-
-        Author author = bookstoreService.fetchAuthor();
+    // The View will NOT force lazy initialization of books
+    @RequestMapping("/fetchwithbooks")
+    public Author fetchAuthorWithBooks() {
+        Author author = bookstoreService.fetchAuthorWithBooks();
 
         return author;
     }
 
-    // Open Session In View will NOT "force" lazy initialization of books
-    @RequestMapping("/fetchnolazy")
-    public Author authorWithoutBooks() {
-
-        Author author = bookstoreService.fetchAuthor();
-
-        // explicitly set Books of the Author
-        // in order to avoid fetching them from the database
-        author.setBooks(Collections.emptyList());
+    // The View will NOT force lazy initialization of books
+    @RequestMapping("/fetchwithoutbooks")
+    public Author fetchAuthorWithoutBooks() {
+        Author author = bookstoreService.fetchAuthorWithoutBooks();
 
         return author;
     }
