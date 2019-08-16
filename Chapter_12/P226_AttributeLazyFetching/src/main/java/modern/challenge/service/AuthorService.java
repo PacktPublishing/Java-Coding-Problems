@@ -5,7 +5,6 @@ import modern.challenge.entity.Author;
 import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
-import java.util.Optional;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -47,11 +46,11 @@ public class AuthorService {
     @Transactional(readOnly = true)
     public Author fetchAuthorWithAvatar() {
 
-        Optional<Author> author = authorRepository.findById(1L);
+        Author author = authorRepository.findById(1L).orElseThrow();
 
-        // this is lazy loaded in another query
-        author.orElseThrow().getAvatar();
+        // this is lazy loaded in a secondary query
+        author.getAvatar();
 
-        return author.orElseThrow();
+        return author;
     }
 }
