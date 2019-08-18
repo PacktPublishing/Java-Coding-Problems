@@ -101,6 +101,10 @@ public class Author implements Serializable {
             return true;
         }
 
+        if (obj == null) {
+            return false;
+        }
+
         if (getClass() != obj.getClass()) {
             return false;
         }
@@ -116,5 +120,5 @@ public class Author implements Serializable {
     @Override
     public String toString() {
         return "Author{" + "id=" + id + ", name=" + name + ", surname=" + surname + ", age=" + age + '}';
-    }        
+    }
 }
