@@ -78,6 +78,10 @@ public class Book implements Serializable {
             return true;
         }
         
+        if (o == null) {
+            return false;
+        }
+        
         if (getClass() != o.getClass()) {
             return false;
         }
