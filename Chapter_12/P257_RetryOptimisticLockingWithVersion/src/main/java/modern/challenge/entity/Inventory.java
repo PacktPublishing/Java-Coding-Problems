@@ -17,7 +17,7 @@ public class Inventory implements Serializable {
     private int quantity;
     
     @Version
-    private long version;    
+    private Long version;    
 
     public Long getId() {
         return id;
@@ -43,7 +43,7 @@ public class Inventory implements Serializable {
         this.quantity = quantity;
     }
 
-    public long getVersion() {
+    public Long getVersion() {
         return version;
     }        
 }
