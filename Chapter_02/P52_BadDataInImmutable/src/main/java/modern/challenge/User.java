@@ -32,7 +32,7 @@ public final class User {
 
         @NotNull(message = "cannot be null")
         @Size(min = 6, max = 50, message
-                = "must be between 3 and 20 characters")
+                = "must be between 6 and 50 characters")
         private final String password;
 
         @Size(min = 3, max = 20, message
