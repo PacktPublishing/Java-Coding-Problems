@@ -70,7 +70,7 @@ public class Main {
 
         // convert String to LocalDateTime
         LocalDateTime localDateTime = LocalDateTime.parse("2020-06-01T11:20:15");
-        // conviert LocalDateTime to String
+        // convert LocalDateTime to String
         String localDateTimeAsDefaultString = localDateTime.toString();
         System.out.println("LocalDateTime: " + localDateTimeAsDefaultString + "( year: " + localDateTime.getYear()
                 + ", month: " + localDateTime.getMonthValue() + ", day: " + localDateTime.getDayOfMonth()
@@ -79,7 +79,7 @@ public class Main {
 
         // convert String to OffsetDateTime
         OffsetDateTime offsetDateTime = OffsetDateTime.parse("2007-12-03T10:15:30+01:00");
-        // conviert OffsetDateTime to String
+        // convert OffsetDateTime to String
         String offsetDateTimeAsDefaultString = offsetDateTime.toString();
         System.out.println("OffsetDateTime: " + offsetDateTimeAsDefaultString + "( year: " + offsetDateTime.getYear()
                 + ", month: " + offsetDateTime.getMonthValue() + ", day: " + offsetDateTime.getDayOfMonth()
