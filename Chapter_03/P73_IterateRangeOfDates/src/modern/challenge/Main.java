@@ -31,8 +31,8 @@ public class Main {
 
         System.out.println("\nStarting with JDK 8");
 
-        LocalDate startLocalDate = LocalDate.of(2019, 1, 1);
-        LocalDate endLocalDate = LocalDate.of(2019, 1, 21);
+        LocalDate startLocalDate = LocalDate.of(2019, 2, 1);
+        LocalDate endLocalDate = LocalDate.of(2019, 2, 21);
 
         for (LocalDate date = startLocalDate; date.isBefore(endLocalDate); date = date.plusDays(1)) {
             // do something with this day
