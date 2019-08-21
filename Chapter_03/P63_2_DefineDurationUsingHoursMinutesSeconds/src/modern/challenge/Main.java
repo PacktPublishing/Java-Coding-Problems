@@ -11,10 +11,10 @@ public class Main {
     public static void main(String[] args) {
 
         Duration t = Duration.ofSeconds(65);
-        System.out.println(t.toSecondsPart());
+        System.out.println("Seconds part: " + t.toSecondsPart());
         
         Duration fromHours = Duration.ofHours(10);
-        System.out.println("Duration from hours: " + fromHours);
+        System.out.println("\nDuration from hours: " + fromHours);
 
         Duration fromMinutes = Duration.of(3, ChronoUnit.MINUTES);
         System.out.println("Duration from minutes: " + fromMinutes);
@@ -60,7 +60,7 @@ public class Main {
                 + durationBetweenLT.toMinutes() + "m:" + durationBetweenLT.toSecondsPart() + "s");
         System.out.println("Expressed as d:h:m:s:n: " + durationToDHMSN(durationBetweenLT));
 
-        System.out.println(startLocalTime + " is before "
+        System.out.println(startLocalTime + " is after "
                 + endLocalTime + " ? " + durationBetweenLT.isNegative());
 
         Duration durationBetweenPlus5Hours = durationBetweenLT.plusHours(5);
