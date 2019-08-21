@@ -20,9 +20,7 @@ public class Main {
             case TENNIS, GOLF, SNOOKER->
                 new Individual();
             case FOOTBALL, VOLLEY->
-                new Team();
-            default->
-                throw new IllegalArgumentException("Invalid player type: " + playerType);
+                new Team();            
         };
     }
 
