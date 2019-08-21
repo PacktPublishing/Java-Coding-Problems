@@ -33,7 +33,7 @@ public class Main {
 
         System.out.println("Expressed as y:m:d: " + periodToYMD(periodBetween));
 
-        System.out.println(startLocalDate + " is before "
+        System.out.println(startLocalDate + " is after "
                 + endLocalDate + " ? " + periodBetween.isNegative());
 
         Period periodBetweenPlus1Year = periodBetween.plusYears(1L);
