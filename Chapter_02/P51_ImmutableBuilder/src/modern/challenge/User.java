@@ -20,6 +20,10 @@ public final class User {
         this.email = builder.email;
     }
 
+    public static UserBuilder getBuilder(String nickname, String password) {
+        return new User.UserBuilder(nickname, password);
+    }
+
     public static final class UserBuilder {
 
         private final String nickname;
