@@ -1,6 +1,6 @@
 package modern.challenge;
 
-public class Pair<V, C> {
+public final class Pair<V, C> {
 
     final V vowels;
     final C consonants;
