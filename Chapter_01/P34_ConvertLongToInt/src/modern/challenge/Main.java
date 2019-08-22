@@ -21,10 +21,6 @@ public class Main {
 
         int intNrExact = Math.toIntExact(nrLong); // Ok
         int intNrMaxExact = Math.toIntExact(nrMaxLong); // ArithmeticException
-
-        System.out.println();
-        System.out.println("Math.toIntExact() Integer.MAX_VALUE: " + intNrExact);
-        System.out.println("Math.toIntExact() Long.MAX_VALUE: " + intNrMaxExact);
     }
 
 }
