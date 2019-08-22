@@ -47,12 +47,12 @@ public final class Strings {
             return "";
         }
 
-        StringJoiner sj = new StringJoiner(String.valueOf(delimiter));
+        StringJoiner joiner = new StringJoiner(String.valueOf(delimiter));
 
         for (String arg : args) {
-            sj.add(arg);
+            joiner.add(arg);
         }
 
-        return sj.toString();
+        return joiner.toString();
     }
 }
