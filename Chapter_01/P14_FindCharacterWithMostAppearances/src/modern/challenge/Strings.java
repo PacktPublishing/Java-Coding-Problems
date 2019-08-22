@@ -64,13 +64,14 @@ public final class Strings {
         int[] asciiCodes = new int[EXTENDED_ASCII_CODES];
 
         for (int i = 0; i < chStr.length; i++) {
-            if (!Character.isWhitespace(chStr[i])) { // ignoring space
+            char currentCh = chStr[i];
+            if (!Character.isWhitespace(currentCh)) { // ignoring space
 
-                int code = (int) chStr[i];
+                int code = (int) currentCh;
                 asciiCodes[code]++;
                 if (asciiCodes[code] > maxOccurrences) {
                     maxOccurrences = asciiCodes[code];
-                    maxCharacter = chStr[i];
+                    maxCharacter = currentCh;
                 }
             }
 
@@ -87,7 +88,7 @@ public final class Strings {
         }
 
         return str.chars()
-                .filter(c -> c != 32) // 32 is space ASCII code
+                .filter(c -> Character.isWhitespace(c) == false) // ignoring space
                 .mapToObj(c -> (char) c)
                 .collect(groupingBy(c -> c, counting()))
                 .entrySet()
