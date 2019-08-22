@@ -4,8 +4,8 @@ public class Main {
 
     public static void main(String[] args) {
 
-        int s = 5 + 5;
-        int m = 3 * 7;
+        int s = 10;
+        int m = 21;
 
         // if (s > m && m < 50)
         if (Boolean.logicalAnd(s > m, m < 50)) {
