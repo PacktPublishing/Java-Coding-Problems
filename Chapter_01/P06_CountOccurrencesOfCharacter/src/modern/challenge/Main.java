@@ -73,7 +73,7 @@ public class Main {
         System.out.println();
         System.out.println("codePointAt() based solution:");
         long startTimeV6 = System.nanoTime();
-        
+
         int countV6 = Strings
                 .countOccurrencesOfACertainCharacterVCP2(TEXT_CP, CHAR_TO_COUNT_CP);
 
@@ -83,7 +83,7 @@ public class Main {
         System.out.println();
         System.out.println("codePointAt() based solution:");
         long startTimeV7 = System.nanoTime();
-        
+
         int countV7 = Strings
                 .countOccurrencesOfACertainCharacterVCP2(TEXT_CP, CHAR_TO_COUNT_CPS);
 
@@ -93,7 +93,7 @@ public class Main {
         System.out.println();
         System.out.println("Java 8, functional-style solution:");
         long startTimeV8 = System.nanoTime();
-        
+
         long countV8 = Strings
                 .countOccurrencesOfACertainCharacterVCP3(TEXT_CP, CHAR_TO_COUNT_CP);
 
@@ -103,7 +103,7 @@ public class Main {
         System.out.println();
         System.out.println("Java 8, functional-style solution:");
         long startTimeV9 = System.nanoTime();
-        
+
         long countV9 = Strings
                 .countOccurrencesOfACertainCharacterVCP3(TEXT_CP, CHAR_TO_COUNT_CPS);
 
@@ -115,5 +115,4 @@ public class Main {
         System.out.println("Execution time: " + time + " ns" + " ("
                 + TimeUnit.MILLISECONDS.convert(time, TimeUnit.NANOSECONDS) + " ms)");
     }
-
 }
