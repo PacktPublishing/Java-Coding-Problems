@@ -18,9 +18,9 @@ public final class Strings {
 
         StringBuilder sb = new StringBuilder();
         char[] chArray = str.toCharArray();
-        for (int i = 0; i < chArray.length; i++) {
-            if (chArray[i] != ch) {
-                sb.append(chArray[i]);
+        for (char c : chArray) {
+            if (c != ch) {
+                sb.append(c);
             }
         }
 
@@ -56,7 +56,7 @@ public final class Strings {
             // or throw IllegalArgumentException
             return "";
         }
-        
+
         if (ch == null || ch.isEmpty() || ch.length() > 2) {
             // or throw IllegalArgumentException
             return "";
