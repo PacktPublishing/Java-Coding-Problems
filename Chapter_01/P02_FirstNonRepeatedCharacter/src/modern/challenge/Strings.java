@@ -8,14 +8,11 @@ import java.util.stream.Collectors;
 public final class Strings {
 
     // http://www.alansofficespace.com/unicode/unicd99.htm
-    private static final int EXTENDED_ASCII_CODES = 256;
+    private static final int EXTENDED_ASCII_CODES = 256; // can be increased to 65535
 
     private Strings() {
         throw new AssertionError("Cannot be instantiated");
     }
-    
-     // Note: For Unicode supplementary characters use codePointAt() instead of charAt()
-     //       and codePoints() instead of chars()
 
     public static char firstNonRepeatedCharacterV1(String str) {
 
@@ -25,7 +22,7 @@ public final class Strings {
         }
 
         for (int i = 0; i < str.length(); i++) {
-                        
+
             char ch = str.charAt(i);
 
             int count = 0;
@@ -116,7 +113,7 @@ public final class Strings {
                 .boxed()
                 .collect(Collectors.groupingBy(Function.identity(),
                         LinkedHashMap::new, Collectors.counting()));
-        
+
         return (char) (int) chs.entrySet().stream()
                 .filter(e -> e.getValue() == 1L)
                 .findFirst()
@@ -124,4 +121,24 @@ public final class Strings {
                 .orElse(Integer.valueOf(Character.MIN_VALUE));
     }
 
+    public static String firstNonRepeatedCharacterVCP4(String str) {
+
+        if (str == null || str.isBlank()) {
+            // or throw IllegalArgumentException
+            return String.valueOf(Character.MIN_VALUE);
+        }
+
+        Map<Integer, Long> chs = str.codePoints()
+                .boxed()
+                .collect(Collectors.groupingBy(Function.identity(),
+                        LinkedHashMap::new, Collectors.counting()));
+
+        int cp = chs.entrySet().stream()
+                .filter(e -> e.getValue() == 1L)
+                .findFirst()
+                .map(Map.Entry::getKey)
+                .orElse(Integer.valueOf(Character.MIN_VALUE));
+
+        return String.valueOf(Character.toChars(cp));
+    }
 }

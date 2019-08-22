@@ -10,9 +10,15 @@ public class Main {
             + "or Fermilab. After graduating, I attended Stanford for a degree in economics and "
             + "computer science.";
 
+    // Ӝ -> Unicode: \u04DC, Code Point: 1244
+    // 💕 -> Unicode: \uD83D\uDC95, Code Point: 128149
+    private static final String TEXT_CP = "😍 💕 I Ӝ love you Ӝ so much 😍";
+
     public static void main(String[] args) {
 
         System.out.println("Input text: \n" + TEXT + "\n");
+
+        System.out.println("\n\nASCII or 16 bits Unicode characters (less than 65,535 (0xFFFF)) examples:\n");
 
         System.out.println("Loop and break solution:");
         long startTimeV1 = System.nanoTime();
@@ -48,6 +54,21 @@ public class Main {
 
         displayExecutionTime(System.nanoTime() - startTimeV4);
         System.out.println("Found character: " + firstcharV4);
+
+        System.out.println("\n---------------------------------------------\n");
+        
+        System.out.println("Input text: \n" + TEXT_CP + "\n");
+        
+        System.out.println("\n\nAll characters examples:\n");
+
+        System.out.println();
+        System.out.println("Java 8, functional-style solution:");
+        long startTimeV5 = System.nanoTime();
+
+        String firstcharV5 = Strings.firstNonRepeatedCharacterVCP4(TEXT_CP);
+
+        displayExecutionTime(System.nanoTime() - startTimeV5);
+        System.out.println("Found character: " + firstcharV5);
     }
 
     private static void displayExecutionTime(long time) {
