@@ -10,43 +10,71 @@ public final class Strings {
     private Strings() {
         throw new AssertionError("Cannot be instantiated");
     }
-    
-    // Note: For Unicode supplementary characters use codePointAt() instead of charAt()
-    //       and codePoints() instead of chars()
 
     public static Map<Character, Integer> countDuplicateCharactersV1(String str) {
 
         if (str == null || str.isBlank()) {
             // or throw IllegalArgumentException
-            return Collections.EMPTY_MAP;
+            return Collections.emptyMap();
         }
 
         Map<Character, Integer> result = new HashMap<>();
 
         for (int i = 0; i < str.length(); i++) {
-            
+
             char ch = str.charAt(i);
 
-            Integer count = result.get(ch);
-            if (count != null) {
-                result.put(ch, ++count);
-            } else {
-                result.put(ch, 1);
+            result.compute(ch, (k, v) -> (v == null) ? 1 : ++v);
+        }
+
+        return result;
+    }
+
+    public static Map<String, Integer> countDuplicateCharactersVCP1(String str) {
+
+        if (str == null || str.isEmpty()) {
+            // or throw IllegalArgumentException            
+            return Collections.emptyMap();
+        }
+
+        Map<String, Integer> result = new HashMap<>();
+
+        for (int i = 0; i < str.length(); i++) {
+
+            String ch = String.valueOf(Character.toChars(str.codePointAt(i)));
+            if (i < str.length() - 1 && str.codePointCount(i, i + 2) == 1) {
+                i++;
             }
+
+            result.compute(ch, (k, v) -> (v == null) ? 1 : ++v);
         }
 
         return result;
     }
 
     public static Map<Character, Long> countDuplicateCharactersV2(String str) {
-        
+
         if (str == null || str.isBlank()) {
             // or throw IllegalArgumentException
-            return Collections.EMPTY_MAP;
+            return Collections.emptyMap();
         }
-     
-        Map<Character, Long> result = str.chars()                
+
+        Map<Character, Long> result = str.chars()
                 .mapToObj(c -> (char) c)
+                .collect(Collectors.groupingBy(c -> c, Collectors.counting()));
+
+        return result;
+    }
+
+    public static Map<String, Long> countDuplicateCharactersVCP2(String str) {
+
+        if (str == null || str.isBlank()) {
+            // or throw IllegalArgumentException
+            return Collections.emptyMap();
+        }
+
+        Map<String, Long> result = str.codePoints()
+                .mapToObj(c -> String.valueOf(Character.toChars(c)))
                 .collect(Collectors.groupingBy(c -> c, Collectors.counting()));
 
         return result;
