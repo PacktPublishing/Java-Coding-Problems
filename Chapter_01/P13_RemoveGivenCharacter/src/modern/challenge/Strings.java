@@ -52,14 +52,13 @@ public final class Strings {
 
     public static String removeCharacterV4(String str, String ch) {
 
-        if (str == null || str.isEmpty()) {
-            // or throw IllegalArgumentException
+        if (str == null || ch == null || str.isEmpty() || ch.isEmpty()) {
+            // or throw IllegalArgumentException            
             return "";
         }
 
-        if (ch == null || ch.isEmpty() || ch.length() > 2) {
-            // or throw IllegalArgumentException
-            return "";
+        if (ch.codePointCount(0, ch.length()) != 1) {
+            return ""; // there is more than 1 Unicode character in the given String
         }
 
         int codePoint = ch.codePointAt(0);

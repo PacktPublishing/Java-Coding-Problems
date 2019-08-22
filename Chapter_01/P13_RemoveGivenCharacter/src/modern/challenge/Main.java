@@ -6,9 +6,10 @@ public class Main {
 
     private static final String TEXT = "oobotooorogshŜoootorgo";
     private static final char CHAR = 'Ŝ';
-    
-    private static final String TEXT_CP = "😍 I love 💕 you so much 💕 😍";
-    private static final String CHAR_CP = "💕"; // code point: 128149
+       
+    private static final String TEXT_CP = "😍 I love 💕 you Ӝ so much 💕 😍";
+    private static final String CHAR_CP = "Ӝ";   // Unicode: \u04DC, Code Point: 1244
+    private static final String CHAR_CPS = "💕"; // Unicode: \uD83D\uDC95, Code Point: 128149
 
     public static void main(String[] args) {        
 
@@ -51,6 +52,17 @@ public class Main {
         
         displayExecutionTime(System.nanoTime() - startTimeV4);
         System.out.println("Result: \n" + resultV4);               
+        
+        System.out.println();
+        System.out.println("Java 8, function-style solution (code point)");  
+        System.out.println("Input text: \n" + TEXT_CP);
+        System.out.println("Character to remove: " + CHAR_CPS + "\n");
+        long startTimeV5 = System.nanoTime();
+       
+        String resultV5 = Strings.removeCharacterV4(TEXT_CP, CHAR_CPS);
+        
+        displayExecutionTime(System.nanoTime() - startTimeV5);
+        System.out.println("Result: \n" + resultV5);               
     }
 
     private static void displayExecutionTime(long time) {
