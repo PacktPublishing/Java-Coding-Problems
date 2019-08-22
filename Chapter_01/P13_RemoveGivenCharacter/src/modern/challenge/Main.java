@@ -4,10 +4,13 @@ import java.util.concurrent.TimeUnit;
 
 public class Main {
 
-    private static final String TEXT = "oobotooorogshoootorgo";
-    private static final char CHAR = 'o';
+    private static final String TEXT = "oobotooorogshŜoootorgo";
+    private static final char CHAR = 'Ŝ';
+    
+    private static final String TEXT_CP = "☻ I 💕 you so much 💕 ☻";
+    private static final String CHAR_CP = "💕"; // code point: 128149
 
-    public static void main(String[] args) {
+    public static void main(String[] args) {        
 
         System.out.println("Input text: \n" + TEXT);
         System.out.println("Character to remove: " + CHAR + "\n");
@@ -37,6 +40,17 @@ public class Main {
 
         displayExecutionTime(System.nanoTime() - startTimeV3);
         System.out.println("Result: \n" + resultV3);
+        
+        System.out.println();
+        System.out.println("Java 8, function-style solution (code point)");  
+        System.out.println("Input text: \n" + TEXT_CP);
+        System.out.println("Character to remove: " + CHAR_CP + "\n");
+        long startTimeV4 = System.nanoTime();
+       
+        String resultV4 = Strings.removeCharacterV4(TEXT_CP, CHAR_CP);
+        
+        displayExecutionTime(System.nanoTime() - startTimeV4);
+        System.out.println("Result: \n" + resultV4);               
     }
 
     private static void displayExecutionTime(long time) {

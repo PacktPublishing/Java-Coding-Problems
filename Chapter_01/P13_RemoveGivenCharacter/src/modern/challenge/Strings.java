@@ -49,4 +49,24 @@ public final class Strings {
                 .mapToObj(c -> String.valueOf((char) c))
                 .collect(Collectors.joining());
     }
+
+    public static String removeCharacterV4(String str, String ch) {
+
+        if (str == null || str.isEmpty()) {
+            // or throw IllegalArgumentException
+            return "";
+        }
+        
+        if (ch == null || ch.isEmpty() || ch.length() > 2) {
+            // or throw IllegalArgumentException
+            return "";
+        }
+
+        int codePoint = ch.codePointAt(0);
+
+        return str.codePoints()
+                .filter(c -> c != codePoint)
+                .mapToObj(c -> String.valueOf(Character.toChars(c)))
+                .collect(Collectors.joining());
+    }
 }
