@@ -23,7 +23,7 @@ public final class Strings {
         if (direction.equals(Sort.ASC)) {
             Arrays.sort(strs, (String s1, String s2)
                     -> Integer.compare(s1.length(), s2.length()));
-        } else if (direction.equals(Sort.DESC)) {
+        } else {
             Arrays.sort(strs, (String s1, String s2)
                     -> (-1) * Integer.compare(s1.length(), s2.length()));
         }
@@ -38,7 +38,7 @@ public final class Strings {
 
         if (direction.equals(Sort.ASC)) {
             Arrays.sort(strs, Comparator.comparingInt(String::length));
-        } else if (direction.equals(Sort.DESC)) {
+        } else {
             Arrays.sort(strs, Comparator.comparingInt(String::length).reversed());
         }
     }
@@ -54,13 +54,11 @@ public final class Strings {
             return Arrays.stream(strs)
                     .sorted(Comparator.comparingInt(String::length))
                     .toArray(String[]::new);
-        } else if (direction.equals(Sort.DESC)) {
+        } else {
             return Arrays.stream(strs)
                     .sorted(Comparator.comparingInt(String::length).reversed())
                     .toArray(String[]::new);
         }
-
-        return new String[0];
     }
 
 }
