@@ -7,7 +7,7 @@ public class Main {
     private static final String TEXT = "oobotooorogshŜoootorgo";
     private static final char CHAR = 'Ŝ';
     
-    private static final String TEXT_CP = "☻ I 💕 you so much 💕 ☻";
+    private static final String TEXT_CP = "😍 I love 💕 you so much 💕 😍";
     private static final String CHAR_CP = "💕"; // code point: 128149
 
     public static void main(String[] args) {        
