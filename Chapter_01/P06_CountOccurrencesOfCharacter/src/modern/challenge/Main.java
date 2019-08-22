@@ -18,7 +18,7 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Input text: \n" + TEXT + "\n");
 
-        System.out.println("\n\nASCII characters examples:\n");
+        System.out.println("\n\nASCII or 16 bits Unicode characters (less than 65,535 (0xFFFF)) examples:\n");
 
         System.out.println("replace() based solution:");
         long startTimeV1 = System.nanoTime();
@@ -49,7 +49,7 @@ public class Main {
         displayExecutionTime(System.nanoTime() - startTimeV3);
         System.out.println("Character '" + CHAR_TO_COUNT + "' occured " + countV3 + " time(s)");
 
-        System.out.println("\n\nUnicode characters examples:\n");
+        System.out.println("\n\nAll characters examples:\n");
 
         System.out.println("replace() based solution:");
         long startTimeV4 = System.nanoTime();
