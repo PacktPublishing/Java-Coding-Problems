@@ -20,9 +20,9 @@ public final class Strings {
 
         char[] chArray = str.toCharArray();
         StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < str.length(); i++) {
-            if (sb.indexOf(String.valueOf(chArray[i])) == -1) {
-                sb.append(chArray[i]);
+        for (char ch : chArray) {
+            if (sb.indexOf(String.valueOf(ch)) == -1) {
+                sb.append(ch);
             }
         }
 
