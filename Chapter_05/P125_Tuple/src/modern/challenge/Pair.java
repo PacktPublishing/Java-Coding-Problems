@@ -1,6 +1,6 @@
 package modern.challenge;
 
-public class Pair<L, R> {
+public final class Pair<L, R> {
 
     final L left;
     final R right;
