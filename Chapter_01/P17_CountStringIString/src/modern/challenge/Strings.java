@@ -9,21 +9,21 @@ public final class Strings {
         throw new AssertionError("Cannot be instantiated");
     }
 
-    public static int countStringInStringV1(String string, String tofind) {
+    public static int countStringInStringV1(String string, String toFind) {
 
-        if (string == null || tofind == null) {
+        if (string == null || toFind == null) {
             throw new IllegalArgumentException("The given strings cannot be null");
         }
 
-        if (string.isBlank() || tofind.isBlank()) {
+        if (string.isBlank() || toFind.isBlank()) {
             return 0;
         }
 
         int position = 0;
         int count = 0;
-        int n = tofind.length();
+        int n = toFind.length();
 
-        while ((position = string.indexOf(tofind, position)) != -1) {
+        while ((position = string.indexOf(toFind, position)) != -1) {
             position = position + n;
             count++;
         }
@@ -31,30 +31,30 @@ public final class Strings {
         return count;
     }
 
-    public static int countStringInStringV2(String string, String tofind) {
+    public static int countStringInStringV2(String string, String toFind) {
 
-        if (string == null || tofind == null) {
+        if (string == null || toFind == null) {
             throw new IllegalArgumentException("The given strings cannot be null");
         }
 
-        if (string.isBlank() || tofind.isBlank()) {
+        if (string.isBlank() || toFind.isBlank()) {
             return 0;
         }
 
-        return string.split(Pattern.quote(tofind), -1).length - 1;
+        return string.split(Pattern.quote(toFind), -1).length - 1;
     }
 
-    public static int countStringInStringV3(String string, String tofind) {
+    public static int countStringInStringV3(String string, String toFind) {
 
-        if (string == null || tofind == null) {
+        if (string == null || toFind == null) {
             throw new IllegalArgumentException("The given strings cannot be null");
         }
 
-        if (string.isBlank() || tofind.isBlank()) {
+        if (string.isBlank() || toFind.isBlank()) {
             return 0;
         }
 
-        Pattern pattern = Pattern.compile(Pattern.quote(tofind));
+        Pattern pattern = Pattern.compile(Pattern.quote(toFind));
         Matcher matcher = pattern.matcher(string);
 
         int position = 0;
