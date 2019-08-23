@@ -6,6 +6,7 @@ import java.util.stream.Collectors;
 public final class Strings {
 
     private static final Pattern PATTERN = Pattern.compile(" +");
+    private static final String WHITESPACE = " ";
 
     private Strings() {
         throw new AssertionError("Cannot be instantiated");
@@ -18,7 +19,7 @@ public final class Strings {
             return "";
         }
 
-        String[] words = str.split(" ");
+        String[] words = str.split(WHITESPACE);
         StringBuilder reversedString = new StringBuilder();
 
         for (String word : words) {
@@ -29,7 +30,7 @@ public final class Strings {
                 reverseWord.append(word.charAt(i));
             }
 
-            reversedString.append(reverseWord).append(" ");
+            reversedString.append(reverseWord).append(WHITESPACE);
         }
 
         return reversedString.toString();
@@ -44,7 +45,7 @@ public final class Strings {
 
         return PATTERN.splitAsStream(str)
                 .map(w -> new StringBuilder(w).reverse())
-                .collect(Collectors.joining(" "));
+                .collect(Collectors.joining(WHITESPACE));
     }
 
     public static String reverse(String str) {
