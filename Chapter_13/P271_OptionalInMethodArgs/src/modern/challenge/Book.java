@@ -11,7 +11,7 @@ public class Book {
         Objects.requireNonNull(format, "Format cannot be null");
 
         Renderer bookRenderer = renderer.orElseThrow(
-                () -> new IllegalArgumentException("Renderer cannot be missing")
+                () -> new IllegalArgumentException("Renderer cannot be empty")
         );
 
         String bookSize = size.orElseGet(() -> "125 x 200");
