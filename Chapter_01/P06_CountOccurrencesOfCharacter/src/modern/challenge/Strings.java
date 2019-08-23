@@ -23,7 +23,7 @@ public final class Strings {
             return -1;
         }
 
-        if (ch.codePointCount(0, ch.length()) != 1) {
+        if (ch.codePointCount(0, ch.length()) > 1) {
             return -1; // there is more than 1 Unicode character in the given String
         }
 
@@ -56,7 +56,7 @@ public final class Strings {
             return -1;
         }
 
-        if (ch.codePointCount(0, ch.length()) != 1) {
+        if (ch.codePointCount(0, ch.length()) > 1) {
             return -1; // there is more than 1 Unicode character in the given String
         }
 
@@ -90,7 +90,7 @@ public final class Strings {
             return -1;
         }
 
-        if (ch.codePointCount(0, ch.length()) != 1) {
+        if (ch.codePointCount(0, ch.length()) > 1) {
             return -1; // there is more than 1 Unicode character in the given String
         }
 
