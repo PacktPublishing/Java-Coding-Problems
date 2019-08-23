@@ -1,15 +1,22 @@
 package modern.challenge;
 
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
+
 public final class Strings {
 
+    private static final Set<Character> allVowels
+            = new HashSet(Arrays.asList('a', 'e', 'i', 'o', 'u'));
+    
     private Strings() {
         throw new AssertionError("Cannot be instantiated");
     }
     
     // Note: For Unicode supplementary characters use codePointAt() instead of charAt()
     //       and codePoints() instead of chars()
-    //       Also note that languages can have different number of vowels and consonants
-    //       (e.g., in Roumanian there are 7 vowels: a, e, i, o, u, ă, î (â). Therefore, 
+    //       Also, note that languages can have a different number of vowels and consonants
+    //       (e.g., in Romanian there are 7 vowels: a, e, i, o, u, ă, î (â). Therefore, 
     //       consider adjust the code accordingly.
 
     public static Pair<Integer, Integer> countVowelsAndConsonantsV1(String str) {
@@ -25,7 +32,7 @@ public final class Strings {
         int consonants = 0;
         for (int i = 0; i < str.length(); i++) {
             char ch = str.charAt(i);
-            if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u') {
+            if (allVowels.contains(ch)) {
                 vowels++;
             } else if ((ch >= 'a' && ch <= 'z')) {
                 consonants++;
@@ -45,11 +52,11 @@ public final class Strings {
         str = str.toLowerCase();
 
         long vowels = str.chars()
-                .filter(ch -> (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u'))
+                .filter(c -> allVowels.contains((char) c))
                 .count();
 
         long consonants = str.chars()
-                .filter(ch -> (ch != 'a' && ch != 'e' && ch != 'i' && ch != 'o' && ch != 'u'))
+                .filter(c -> !allVowels.contains((char) c))
                 .filter(ch -> (ch >= 'a' && ch <= 'z'))
                 .count();
 
