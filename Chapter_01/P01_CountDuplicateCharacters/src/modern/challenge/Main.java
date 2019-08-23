@@ -40,7 +40,7 @@ public class Main {
         System.out.println(Arrays.toString(duplicatesV2.entrySet().toArray()));
         // or: duplicatesV2.forEach( (k, v) -> System.out.print(k + "="+ v + ", "));
         
-        System.out.println("\n\nAll characters examples:\n");
+        System.out.println("\n\nIncluding Unicode surrogate pairs examples:\n");
         System.out.println("HashMap based solution:");
         long startTimeV3 = System.nanoTime();
         

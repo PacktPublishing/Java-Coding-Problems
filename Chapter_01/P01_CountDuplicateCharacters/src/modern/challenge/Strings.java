@@ -18,7 +18,7 @@ public final class Strings {
             return Collections.emptyMap();
         }
 
-        Map<Character, Integer> result = new HashMap<>();
+        Map<Character, Integer> result = new HashMap<>();                
 
         for (int i = 0; i < str.length(); i++) {
 
