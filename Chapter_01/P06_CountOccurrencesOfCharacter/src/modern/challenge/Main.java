@@ -49,7 +49,11 @@ public class Main {
         displayExecutionTime(System.nanoTime() - startTimeV3);
         System.out.println("Character '" + CHAR_TO_COUNT + "' occured " + countV3 + " time(s)");
 
-        System.out.println("\n\nAll characters examples:\n");
+        System.out.println("\n--------------------------------------\n");
+        
+        System.out.println("Input text: \n" + TEXT_CP + "\n");
+        
+        System.out.println("\n\nIncluding Unicode surrogate pairs examples:\n");
 
         System.out.println("replace() based solution:");
         long startTimeV4 = System.nanoTime();
