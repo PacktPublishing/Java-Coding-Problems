@@ -86,12 +86,7 @@ public final class Strings {
         for (int i = 0; i < str.length(); i++) {
             char ch = str.charAt(i);
 
-            Integer count = chars.get(ch);
-            if (count == null) {
-                chars.put(ch, 1);
-            } else {
-                chars.put(ch, ++count);
-            }
+            chars.compute(ch, (k, v) -> (v == null) ? 1 : ++v);
         }
 
         for (Map.Entry<Character, Integer> entry : chars.entrySet()) {
