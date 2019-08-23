@@ -59,7 +59,7 @@ public class Main {
         
         System.out.println("Input text: \n" + TEXT_CP + "\n");
         
-        System.out.println("\n\nAll characters examples:\n");
+        System.out.println("\n\nIncluding Unicode surrogate pairs examples:\n");
 
         System.out.println();
         System.out.println("Java 8, functional-style solution:");
