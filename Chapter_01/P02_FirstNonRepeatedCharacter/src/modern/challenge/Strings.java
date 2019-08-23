@@ -56,10 +56,11 @@ public final class Strings {
 
         for (int i = 0; i < str.length(); i++) {
 
-            if (flags[str.charAt(i)] == -1) {
-                flags[str.charAt(i)] = i;
+            char ch = str.charAt(i);
+            if (flags[ch] == -1) {
+                flags[ch] = i;
             } else {
-                flags[str.charAt(i)] = -2;
+                flags[ch] = -2;
             }
         }
 
