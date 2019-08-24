@@ -18,34 +18,34 @@ public class Book {
         }
     }
 
-    // Prefer
+    // Prefer (before Java 10)
     public String findStatusPrefer1() {
 
         // fetch an Optional prone to be empty
         Optional<String> status = Optional.empty();
 
         return status.orElseThrow(
-               () -> new IllegalStateException("Status cannot be found"));
+               () -> new NoSuchElementException("Status cannot be found"));
         // or without message
-        // return status.orElseThrow(IllegalStateException::new);
-    }
-
-    // Prefer (before Java 10)
-    public String findStatusPrefer2() {
-
-        // fetch an Optional prone to be empty
-        Optional<String> status = Optional.empty();
-
-        return status.orElseThrow(
-                () -> new IllegalStateException("Status cannot be found"));
+        // return status.orElseThrow(NoSuchElementException::new);
     }
 
     // Prefer (Java 10+)
-    public String findStatusPrefer3() {
+    public String findStatusPrefer2() {
 
         // fetch an Optional prone to be empty
         Optional<String> status = Optional.empty();
 
         return status.orElseThrow(); // NoSuchElementException 
     }
+    
+    // Throw another exception
+    public String findStatusPrefer3() {
+
+        // fetch an Optional prone to be empty
+        Optional<String> status = Optional.empty();
+
+        return status.orElseThrow(
+                () -> new IllegalStateException("Status cannot be found"));
+    }   
 }
