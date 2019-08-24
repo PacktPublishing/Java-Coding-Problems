@@ -8,7 +8,8 @@ public class Main {
 
         // Avoid
         BookAvoid bookAvoid = new BookAvoid();
-        bookAvoid.setIsbn(Optional.empty());
+        bookAvoid.setIsbn(null);        
+        bookAvoid.setIsbn(Optional.empty());        
         bookAvoid.setIsbn(Optional.of("123-456-789"));
 
         // Prefer
