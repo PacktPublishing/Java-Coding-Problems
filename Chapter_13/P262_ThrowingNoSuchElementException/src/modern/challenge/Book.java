@@ -14,7 +14,7 @@ public class Book {
         if (status.isPresent()) {
             return status.get();
         } else {
-            throw new NoSuchElementException();
+            throw new NoSuchElementException("Status cannot be found");
         }
     }
 
@@ -24,7 +24,10 @@ public class Book {
         // fetch an Optional prone to be empty
         Optional<String> status = Optional.empty();
 
-        return status.orElseThrow(IllegalStateException::new);
+        return status.orElseThrow(
+               () -> new IllegalStateException("Status cannot be found"));
+        // or without message
+        // return status.orElseThrow(IllegalStateException::new);
     }
 
     // Prefer (before Java 10)
@@ -33,7 +36,8 @@ public class Book {
         // fetch an Optional prone to be empty
         Optional<String> status = Optional.empty();
 
-        return status.orElseThrow(NoSuchElementException::new);
+        return status.orElseThrow(
+                () -> new IllegalStateException("Status cannot be found"));
     }
 
     // Prefer (Java 10+)
@@ -42,6 +46,6 @@ public class Book {
         // fetch an Optional prone to be empty
         Optional<String> status = Optional.empty();
 
-        return status.orElseThrow(); // NoSuchElementException
+        return status.orElseThrow(); // NoSuchElementException 
     }
 }
