@@ -46,7 +46,7 @@ public class Main {
         System.out.println("HashMap based solution:");
         long startTimeV3 = System.nanoTime();
         
-        Map<String, Long> duplicatesV3 = Strings.countDuplicateCharactersVCP1(TEXT_CP);
+        Map<String, Integer> duplicatesV3 = Strings.countDuplicateCharactersVCP1(TEXT_CP);
         
         displayExecutionTime(System.nanoTime()-startTimeV3);
         System.out.println(Arrays.toString(duplicatesV3.entrySet().toArray()));
