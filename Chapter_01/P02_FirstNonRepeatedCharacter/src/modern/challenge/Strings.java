@@ -83,6 +83,7 @@ public final class Strings {
 
         Map<Character, Integer> chars = new LinkedHashMap<>();
 
+        // or use for(char ch: str.toCharArray()) { ... }
         for (int i = 0; i < str.length(); i++) {
             char ch = str.charAt(i);
 
