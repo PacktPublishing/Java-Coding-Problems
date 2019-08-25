@@ -106,7 +106,7 @@ public final class Strings {
         }
 
         Map<Integer, Long> chs = str.chars()
-                .mapToObj(c -> c)
+                .mapToObj(cp -> cp)
                 .collect(Collectors.groupingBy(Function.identity(),
                         LinkedHashMap::new, Collectors.counting()));
 
@@ -125,7 +125,7 @@ public final class Strings {
         }
 
         Map<Integer, Long> chs = str.codePoints()
-                .mapToObj(c -> c)
+                .mapToObj(cp -> cp)
                 .collect(Collectors.groupingBy(Function.identity(),
                         LinkedHashMap::new, Collectors.counting()));
 
