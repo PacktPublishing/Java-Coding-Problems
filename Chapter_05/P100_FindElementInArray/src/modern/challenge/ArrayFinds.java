@@ -10,7 +10,7 @@ public final class ArrayFinds {
         throw new AssertionError("Cannot be instantiated");
     }
 
-    public static boolean findElementV1(int[] arr, int find) {
+    public static boolean containsElementV1(int[] arr, int find) {
 
         if (arr == null) {
             throw new IllegalArgumentException("Array cannot be null");
@@ -25,7 +25,7 @@ public final class ArrayFinds {
         return false;
     }
 
-    public static boolean findElementV2(int[] arr, int find) {
+    public static boolean containsElementV2(int[] arr, int find) {
 
         if (arr == null) {
             throw new IllegalArgumentException("Array cannot be null");
@@ -37,7 +37,7 @@ public final class ArrayFinds {
         return (index >= 0);
     }
 
-    public static boolean findElementV3(int[] arr, int find) {
+    public static boolean containsElementV3(int[] arr, int find) {
 
         if (arr == null) {
             throw new IllegalArgumentException("Array cannot be null");
@@ -47,7 +47,7 @@ public final class ArrayFinds {
                 .anyMatch(e -> e == find);
     }
 
-    public static <T> boolean findElementObjectV1(T[] arr, T find) {
+    public static <T> boolean containsElementObjectV1(T[] arr, T find) {
 
         if (arr == null || find == null) {
             throw new IllegalArgumentException("None of the arguments can be null");
@@ -62,7 +62,7 @@ public final class ArrayFinds {
         return false;
     }
 
-    public static <T> boolean findElementObjectV2(T[] arr, T find, Comparator<? super T> c) {
+    public static <T> boolean containsElementObjectV2(T[] arr, T find, Comparator<? super T> c) {
 
         if (arr == null || find == null || c == null) {
             throw new IllegalArgumentException("None of the arguments can be null");
@@ -77,7 +77,7 @@ public final class ArrayFinds {
         return false;
     }
 
-    public static <T> boolean findElementObjectV3(T[] arr, T find, Comparator<? super T> c) {
+    public static <T> boolean containsElementObjectV3(T[] arr, T find, Comparator<? super T> c) {
 
         if (arr == null || find == null || c == null) {
             throw new IllegalArgumentException("None of the arguments can be null");
