@@ -4,9 +4,9 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.stream.IntStream;
 
-public final class ArrayFinds {
+public final class ArraySearch {
 
-    private ArrayFinds() {
+    private ArraySearch() {
         throw new AssertionError("Cannot be instantiated");
     }
 
