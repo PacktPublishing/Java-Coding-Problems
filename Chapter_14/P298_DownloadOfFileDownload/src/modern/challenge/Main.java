@@ -7,6 +7,7 @@ import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 import java.nio.file.Path;
 import static java.nio.file.StandardOpenOption.CREATE;
+import static java.nio.file.StandardOpenOption.WRITE;
 
 public class Main {
 
@@ -22,7 +23,7 @@ public class Main {
 
         HttpResponse<Path> response = client.send(
                 request, HttpResponse.BodyHandlers
-                        .ofFileDownload(Path.of(System.getProperty("user.dir")), CREATE));
+                        .ofFileDownload(Path.of(System.getProperty("user.dir")), CREATE, WRITE));
 
         System.out.println("Status code: " + response.statusCode());
         System.out.println("\n Body: " + response.body());
