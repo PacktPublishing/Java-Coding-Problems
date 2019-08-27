@@ -29,7 +29,7 @@ public class Main {
                 .build();
 
         HttpRequest request = HttpRequest.newBuilder()
-                .header("Authorization", "Bearer mT8JNMyWCG0D7waCHkyxo0Hm80YBqelv5SBL")                
+                .header("Authorization", "Bearer Q3ku4mp_hCQGvAFeYKa0ktFCDKS3VpSA1nwf")                
                 .uri(URI.create("https://gorest.co.in/public-api/users/1"))
                 .build();
 
