@@ -90,7 +90,7 @@ public class Main {
 
             return inputStream;
         } catch (IOException ex) {
-            throw new RuntimeException(ex);
+            throw new RuntimeException("File could not be read: ", ex);
         }
     }
 
