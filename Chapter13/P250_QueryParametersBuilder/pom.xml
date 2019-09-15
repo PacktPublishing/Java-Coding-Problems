@@ -4,11 +4,11 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.jpa</groupId>
-    <artifactId>P283_QueryParametersBuilder</artifactId>
+    <artifactId>P250_QueryParametersBuilder</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
 
-    <name>P283_QueryParametersBuilder</name>
+    <name>P250_QueryParametersBuilder</name>
    
     <parent>
         <groupId>org.springframework.boot</groupId>
