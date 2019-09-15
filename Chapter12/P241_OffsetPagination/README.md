@@ -1,2 +1,0 @@
-# Offset pagination
-Write a program that serves **Book**s in pages using offset pagination (**Book** is an entity). Moreover, write a similar program that eliminates the **SELECT COUNT** overhead specific to offset pagination (fetching each page triggers two **SELECT**s, and one of them is a **SELECT COUNT**).
