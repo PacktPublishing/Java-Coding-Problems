@@ -1,6 +1,9 @@
-# Optional
-This chapter includes 24 problems meant to draw several rules for working with **Optional**. The problems and solutions presented in this section 
-are based on the Brian Goetz (Java’s language architect) definition: *Optional is intended to provide a limited mechanism for library method 
-return types where there needed to be a clear way to represent “no result," and using null for such was overwhelmingly likely to cause errors.*
- But, where there are rules there are exceptions as well. Therefore, do not conclude that the rules (or practices) presented here should be 
-followed (or avoided) at all costs. Like always, it’s an it depends problem that requires to evaluate the situation and weight pros and cons.
+# The HTTP Client and WebSocket APIs
+This chapter includes 20 problems that are meant to cover the HTTP Client and WebSocket APIs.
+
+Do you remember HttpUrlConnection? Well, JDK 11 comes with the HTTP Client API as a reinvention of HttpUrlConnection. 
+The HTTP Client API is easy to use and supports HTTP/2 (default) and HTTP/1.1. For backward compatibility, the HTTP Client API 
+will automatically downgrade from HTTP/2 to HTTP 1.1 when the server doesn't support HTTP/2. Moreover, the HTTP Client API 
+supports synchronous and asynchronous programming models and relies on streams to transfer data (reactive streams). It also 
+supports the WebSocket protocol, which is used in real-time web applications to provide client-server communication with low 
+message overhead.
