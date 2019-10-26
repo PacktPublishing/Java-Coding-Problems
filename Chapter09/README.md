@@ -1,4 +1,4 @@
-# Functional style programming - Deep dive
+# Functional style programming - Deep dive 
 Chapter 8 and 9 includes 33 problems that involve Java functional style programming. The chapter starts with a problem meant to provide a 
 complete journey from 0 to functional interfaces. It continues with a suite of design patterns from GoF interpreted in Java functional 
 style. Next, we focus on several problems that involves classical operations encountered in streams (e.g., filter, map, etc), we discuss 
