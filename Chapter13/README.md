@@ -1,4 +1,4 @@
-# The HTTP Client and WebSocket APIs
+# The HTTP Client and WebSocket APIs 
 This chapter includes 20 problems that are meant to cover the HTTP Client and WebSocket APIs.
 
 Do you remember `HttpUrlConnection`? Well, JDK 11 comes with the HTTP Client API as a reinvention of `HttpUrlConnection`. 
