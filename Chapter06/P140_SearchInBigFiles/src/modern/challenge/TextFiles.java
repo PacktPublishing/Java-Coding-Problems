@@ -109,7 +109,7 @@ public final class TextFiles {
         return count;
     }
 
-    public static int countOccurrencesV5(Path path, String text) throws IOException {
+    public static long countOccurrencesV5(Path path, String text) throws IOException {
 
         if (path == null || text == null) {
             throw new IllegalArgumentException("Path/text cannot be null");
@@ -121,20 +121,20 @@ public final class TextFiles {
 
         final byte[] texttofind = text.getBytes(StandardCharsets.UTF_8);
 
-        int count = 0;
+        long count = 0;
         try (FileChannel fileChannel = FileChannel.open(path, StandardOpenOption.READ)) {
 
-            int position = 0;
+            long position = 0;
             long length = fileChannel.size();
             while (position < length) {
 
                 long remaining = length - position;
-                int bytestomap = (int) Math.min(MAP_SIZE, remaining);
+                long bytestomap = (long) Math.min(MAP_SIZE, remaining);
                 MappedByteBuffer mbBuffer = fileChannel.map(MapMode.READ_ONLY, position, bytestomap);
 
-                int limit = mbBuffer.limit();
-                int lastSpace = -1;
-                int firstChar = -1;
+                long limit = mbBuffer.limit();
+                long lastSpace = -1;
+                long firstChar = -1;
                 while (mbBuffer.hasRemaining()) {
 
                     boolean isFirstChar = false;
