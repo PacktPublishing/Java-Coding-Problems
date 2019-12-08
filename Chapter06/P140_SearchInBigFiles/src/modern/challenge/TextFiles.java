@@ -15,7 +15,7 @@ import java.util.regex.Pattern;
 
 public final class TextFiles {
 
-    private static final int MAP_SIZE = 5242880; // 5 MB in bytes
+    private static final long MAP_SIZE = 5242880; // 5 MB in bytes
 
     private TextFiles() {
         throw new AssertionError("Cannot be instantiated");
