@@ -7,7 +7,7 @@ This is the code repository for [Java Coding Problems ](https://www.packtpub.com
 **Improve your Java Programming skills by solving real-world coding challenges**
 
 ## What is this book about?
-* Adopt the latest JDK 11 and JDK 12 features in your applications
+* Adopt the latest JDK 8 - JDK 13 features in your applications
 * Solve cutting-edge problems relating to collections and data structures
 * Get to grips with functional-style programming using lambdas
 * Perform asynchronous communication and parallel data processing
@@ -29,13 +29,16 @@ All of the code is organized into folders. For example, Chapter02.
 The code will look like the following:
 ```
 public Map<Character, Integer> countDuplicateCharacters(String str) {
- Map<Character, Integer> result = new HashMap<>();
- // or use for(char ch: str.toCharArray()) { ... }
- for (int i = 0; i<str.length(); i++) {
- char ch = str.charAt(i);
- result.compute(ch, (k, v) -> (v == null) ? 1 : ++v);
- }
- return result;
+
+   Map<Character, Integer> result = new HashMap<>();
+ 
+   // or use for(char ch: str.toCharArray()) { ... }
+   for (int i = 0; i<str.length(); i++) {
+      char ch = str.charAt(i);
+      result.compute(ch, (k, v) -> (v == null) ? 1 : ++v);
+   }
+   
+   return result;
 }
 ```
 
