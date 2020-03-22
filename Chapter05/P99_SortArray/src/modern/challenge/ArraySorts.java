@@ -437,7 +437,54 @@ public final class ArraySorts {
         }
     }
 
-    public static void bucketSort(int[] arr) {
+    /* Bucket sort - Scatter-Sort-Gather approach */
+    public static void bucketSortSSG(int[] arr) {
+
+        if (arr == null) {
+            throw new IllegalArgumentException("Array cannot be null");
+        }
+    
+        int[] hashes = hash(arr);
+
+        List<Integer>[] buckets = new List[hashes[1]];
+        for (int i = 0; i < hashes[1]; i++) {
+            buckets[i] = new ArrayList();
+        }
+
+        for (int e : arr) {
+            buckets[hash(e, hashes)].add(e);
+        }
+
+        for (List bucket : buckets) {
+            Collections.sort(bucket);
+        }
+
+        int p = 0;
+        for (List<Integer> bucket : buckets) {
+            for (int j : bucket) {
+                arr[p++] = j;
+            }
+        }
+    }
+
+    private static int[] hash(int[] arr) {
+
+        int m = arr[0];
+        for (int i = 1; i < arr.length; i++) {
+            if (m < arr[i]) {
+                m = arr[i];
+            }
+        }
+
+        return new int[]{m, (int) Math.sqrt(arr.length)};
+    }
+
+    private static int hash(int num, int[] hashes) {
+        return (int) ((double) num / hashes[0] * (hashes[1] - 1));
+    }
+
+    /* Bucket sort - Scatter-Gather approach */
+    public static void bucketSortSG(int[] arr) {
 
         if (arr == null) {
             throw new IllegalArgumentException("Array cannot be null");
