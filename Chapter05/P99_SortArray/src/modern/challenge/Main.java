@@ -151,7 +151,7 @@ public class Main {
         System.out.println("\nSorting numbers ...");
         int[] cloneIntegersBks = integers.clone();
         long startTimeV13 = clock.millis();
-        ArraySorts.bucketSort(cloneIntegersBks);
+        ArraySorts.bucketSortSG(cloneIntegersBks); // or call bucketSortSSG()
         displayExecutionTime(clock.millis() - startTimeV13);
         displayIntSortedArray(cloneIntegersBks);
 
