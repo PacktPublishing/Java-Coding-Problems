@@ -7,6 +7,8 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.util.Arrays;
+import modern.challenge.shallow.copy.matrix.Matrices;
 import org.apache.commons.lang3.SerializationUtils;
 
 public class Main {
@@ -14,7 +16,7 @@ public class Main {
     public static void main(String[] args) throws CloneNotSupportedException {
 
         // shallow copy via manual copy
-        System.out.println("Shallow copy via manual copy:");
+        System.out.println("\nShallow copy via manual copy:");
         modern.challenge.shallow.copy.manually.Point point1
                 = new modern.challenge.shallow.copy.manually.Point(5, 5);
 
@@ -159,6 +161,44 @@ public class Main {
         System.out.println("Clone 7, (x, y, Radius start, Radius end): "
                 + clone7.getX() + ", " + clone7.getY()
                 + ", " + clone7.getRadius().getStart() + ", " + clone7.getRadius().getEnd());
+
+        int[][] source = {{3, 1, 5}, {3, 6, 7}};
+
+        // shallow copy of matrix (1)
+        System.out.println("\nShallow copy of matrix via manual copy (1):");
+        int[][] target1 = Matrices.cloneArrayOfInt1(source);
+        target1[0][0] = 0;
+        System.out.println("Original array:");
+        printMatrix(source);
+        System.out.println("Cloned and modified array:");
+        printMatrix(target1);
+
+        // shallow copy of matrix (2)
+        System.out.println("\nShallow copy of matrix via manual copy (2):");
+        int[][] target2 = Matrices.cloneArrayOfInt2(source);
+        target2[0][0] = 0;
+        System.out.println("Original array:");
+        printMatrix(source);
+        System.out.println("Cloned and modified array:");
+        printMatrix(target2);
+
+        // shallow copy of matrix (3)
+        System.out.println("\nShallow copy of matrix via manual copy (3):");
+        int[][] target3 = Matrices.cloneArrayOfInt3(source);
+        target3[0][0] = 0;
+        System.out.println("Original array:");
+        printMatrix(source);
+        System.out.println("Cloned and modified array:");
+        printMatrix(target3);
+
+        // shallow copy of matrix (4)
+        System.out.println("\nShallow copy of matrix via manual copy (4):");
+        int[][] target4 = Matrices.cloneArrayOfInt4(source);
+        target4[0][0] = 0;
+        System.out.println("Original array:");
+        printMatrix(source);
+        System.out.println("Cloned and modified array:");
+        printMatrix(target4);
     }
 
     @SuppressWarnings("unchecked")
@@ -180,6 +220,16 @@ public class Main {
         } catch (IOException | ClassNotFoundException ex) {
             // log exception
             return t;
+        }
+    }
+
+    // helper method to display a matrix
+    private static void printMatrix(int[][] matrix) {
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix[0].length; j++) {
+                System.out.print(matrix[i][j] + " ");
+            }
+            System.out.println();
         }
     }
 }
