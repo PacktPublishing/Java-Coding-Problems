@@ -16,12 +16,12 @@ public class BookstoreService {
                         new Book("History of a day", "JN-001"),
                         new Book("Prague history", "JN-002")
                 )),
-                        new Author("Mark Janel", "Horror", List.of(
-                                new Book("Carrie", "MJ-001"),
-                                new Book("House of pain", "MJ-002")
-                        )                        
+                new Author("Mark Janel", "Horror", List.of(
+                        new Book("Carrie", "MJ-001"),
+                        new Book("House of pain", "MJ-002")
+                )
                 ));
-        
+
         return authors;
     }
 }
