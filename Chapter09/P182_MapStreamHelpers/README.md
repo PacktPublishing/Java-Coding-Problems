@@ -1,2 +1,2 @@
 # Map a stream
-Write several examples of mapping a stream via **map()** and **flatMap()**.
+Write a helper method that uses **Stream#map()** to convert **List< P >** in **List< Q >**. Write a heper method that does the same thing for arrays.
