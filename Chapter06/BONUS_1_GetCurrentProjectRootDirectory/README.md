@@ -1,2 +1,2 @@
-# Converting `Date` to `YearMonth`
-Write a program that converts an `Date` to `YearMonth` and vice-versa. 
+# Current directory
+Write a program that return the current project root directory
