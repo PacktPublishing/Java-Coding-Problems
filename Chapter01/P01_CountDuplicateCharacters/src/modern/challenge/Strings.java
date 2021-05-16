@@ -51,7 +51,7 @@ public final class Strings {
             // or, like this (this code produce the same result as the commented code above
             int cp = str.codePointAt(i);
             String ch = String.valueOf(Character.toChars(cp));
-            if(Character.charCount(cp) == 2) { // 2 means a suroggate pair
+            if(Character.charCount(cp) == 2) { // 2 means a surrogate pair
                 i++;
             }
 
