@@ -1,7 +1,5 @@
-## $5 Tech Unlocked 2021!
-[Buy and download this Book for only $5 on PacktPub.com](https://www.packtpub.com/product/java-coding-problems/9781789801415)
------
-*If you have read this book, please leave a review on [Amazon.com](https://www.amazon.com/gp/product/1789801419).     Potential readers can then use your unbiased opinion to help them make purchase decisions. Thank you. The $5 campaign         runs from __December 15th 2020__ to __January 13th 2021.__*
+
+
 
 # Java Coding Problems 
 
@@ -73,3 +71,7 @@ He is the author of several books, videos, and dozens of articles related to Jav
 [Click here](https://docs.google.com/forms/d/e/1FAIpQLSdy7dATC6QmEL81FIUuymZ0Wy9vH1jHkvpY57OiMeKGqib_Ow/viewform) if you have any feedback or suggestions.
 
 
+### Download a free PDF
+
+ <i>If you have already purchased a print or Kindle version of this book, you can get a DRM-free PDF version at no cost.<br>Simply click on the link to claim your free PDF.</i>
+<p align="center"> <a href="https://packt.link/free-ebook/9781789801415">https://packt.link/free-ebook/9781789801415 </a> </p>
