@@ -1,5 +1,5 @@
 package modern.challenge;
-
+ 
 import java.nio.MappedByteBuffer;
 import java.io.OutputStream;
 import java.io.InputStream;
