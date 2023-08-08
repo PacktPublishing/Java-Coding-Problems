@@ -1,0 +1,1 @@
+In this folder we copy the file used by benchmark.
