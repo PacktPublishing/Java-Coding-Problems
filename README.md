@@ -3,7 +3,7 @@
 
 # Java Coding Problems 
 
-<a href="https://www.packtpub.com/programming/java-coding-problems?utm_source=github&utm_medium=repository&utm_campaign="><img src="https://www.packtpub.com/media/catalog/product/cache/4cdce5a811acc0d2926d7f857dceb83b/9/7/9781789801415-original.jpeg" alt="Java Coding Problems " height="256px" align="right"></a>
+<a href="https://www.packtpub.com/programming/java-coding-problems?utm_source=github&utm_medium=repository&utm_campaign="><img src="https://content.packt.com/B12731/cover_image_small.png" alt="Java Coding Problems " height="256px" align="right"></a>
 
 This is the code repository for [Java Coding Problems ](https://www.packtpub.com/programming/java-coding-problems?utm_source=github&utm_medium=repository&utm_campaign=), published by Packt.
 
